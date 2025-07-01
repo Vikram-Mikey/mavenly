@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const PROGRAMS = [
   { name: 'Full Stack Development', img: '/Full Stack Development.jpg' },
@@ -2288,6 +2289,7 @@ function App() {
       </Routes>
       <Footer />
       <WhatsAppButton />
+      <SpeedInsights/>
     </Router>
   );
 }

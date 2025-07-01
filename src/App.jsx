@@ -1,7 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
-
 
 const PROGRAMS = [
   { name: 'Full Stack Development', img: '/Full Stack Development.jpg' },
@@ -29,7 +28,7 @@ const PROGRAMS = [
 function Home() {
   const navigate = useNavigate();
   const logosRef = useRef(null);
-
+   
   useEffect(() => {
     const logos = logosRef.current;
     if (logos) {
@@ -501,7 +500,7 @@ function Home() {
     </div>
   </div>
 </section>
-<section className="testimonial-section" style={{width: '100vw', background: '#000', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '3rem 0'}}>
+<section className="testimonial-section" style={{width: '100vw', background: '#000', display: 'flex', 'justify-content': 'center', alignItems: 'center', padding: '3rem 0'}}>
   <div className="testimonial-content" style={{width: '95vw', maxWidth: '1100px', background: 'linear-gradient(90deg, #ff5757 0%, #4998da 100%)', borderRadius: '16px', padding: '2.5rem 2rem', color: '#fff', boxShadow: '0 2px 16px rgba(0,0,0,0.08)'}}>
     <h2 style={{fontWeight: 'bold', fontSize: '2rem', color: '#fff', marginBottom: '0.5rem', textAlign: 'center'}}>Testimonial</h2>
     <h3 style={{fontWeight: 'bold', fontSize: '1.3rem', color: '#4998da', marginBottom: '2.5rem', textAlign: 'center'}}>What alumni say about us</h3>
@@ -1117,11 +1116,7 @@ function ProgramDevSection({ className, imgSrc, imgAlt }) {
           <li>Certificate on completion</li>
           <li>$4,999.00</li>
         </ul>
-        {cartMessage && (
-  <div style={{ color: cartMessage === 'Added to cart!' ? '#4998da' : '#ff5757', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
-    {cartMessage}
-  </div>
-)}
+        
         <button
   style={{
     marginTop: '1rem',
@@ -1183,11 +1178,7 @@ function ProgramDevSection({ className, imgSrc, imgAlt }) {
           <li>Project feedback</li>
           <li>$9,999.00</li>
         </ul>
-        {cartMessage && (
-  <div style={{ color: cartMessage === 'Added to cart!' ? '#4998da' : '#ff5757', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
-    {cartMessage}
-  </div>
-)}
+        
        <button
   style={{
     marginTop: '1rem',
@@ -1205,7 +1196,7 @@ function ProgramDevSection({ className, imgSrc, imgAlt }) {
   onMouseDown={e => e.currentTarget.style.background = '#ff5757'}
   onMouseUp={e => e.currentTarget.style.background = '#4998da'}
   onMouseLeave={e => e.currentTarget.style.background = '#4998da'}
- onClick={() => {
+  onClick={() => {
   const programName = imgAlt;
   const programObj = PROGRAMS.find(p => p.name === programName);
   if (!programObj) {
@@ -1249,11 +1240,7 @@ function ProgramDevSection({ className, imgSrc, imgAlt }) {
           <li>Exclusive webinars</li>
           <li>$14,999.00</li>
         </ul>
-        {cartMessage && (
-  <div style={{ color: cartMessage === 'Added to cart!' ? '#4998da' : '#ff5757', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
-    {cartMessage}
-  </div>
-)}
+        
        <button
   style={{
     marginTop: '1rem',
